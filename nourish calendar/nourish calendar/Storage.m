@@ -30,13 +30,14 @@
             NSDate * de = [[NSDate alloc]initWithTimeIntervalSinceNow:3600];
             EventObject * e1=[[EventObject alloc]initWithName:@"Poker Night Fundraiser" startTime:ds endTime:de description:@"COME!"];
             EventObject * e2=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
-            EventObject * e3=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
-            EventObject * e4=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
-            EventObject * e5=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
-            EventObject * e6=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
-            EventObject * e7=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
-            EventObject * e8=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
-            EventObject * e9=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];EventObject * e10=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
+            EventObject * e3=[[EventObject alloc]initWithName:@"Movie Night" startTime:ds endTime:de description:@""];
+            EventObject * e4=[[EventObject alloc]initWithName:@"Event A" startTime:ds endTime:de description:@""];
+            EventObject * e5=[[EventObject alloc]initWithName:@"Event B" startTime:ds endTime:de description:@""];
+            EventObject * e6=[[EventObject alloc]initWithName:@"Event C" startTime:ds endTime:de description:@""];
+            EventObject * e7=[[EventObject alloc]initWithName:@"Event D" startTime:ds endTime:de description:@""];
+            EventObject * e8=[[EventObject alloc]initWithName:@"Event E" startTime:ds endTime:de description:@""];
+            EventObject * e9=[[EventObject alloc]initWithName:@"Event F" startTime:ds endTime:de description:@""];
+            EventObject * e10=[[EventObject alloc]initWithName:@"Event G" startTime:ds endTime:de description:@""];
             [self.events addObject:e1];
             [self.events addObject:e2];
             [self.events addObject:e3];
@@ -101,4 +102,17 @@
     [NSKeyedArchiver archiveRootObject:self.events toFile:directory];
 }
 
+-(void)addEvent:(EventObject *)obj
+{
+    [self.events insertObject:obj atIndex:0];
+}
+
+-(void)removeObjectAtIndex:(int)index
+{
+    [self.events removeObjectAtIndex:index];
+}
+-(void)removeObject:(EventObject*)obj
+{
+    [self.events removeObject:obj];
+}
 @end

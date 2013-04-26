@@ -32,6 +32,12 @@
 		14533167172A25EE00E4FD8A /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14533165172A25EE00E4FD8A /* EventDetailViewController.xib */; };
 		1453316B172A32C700E4FD8A /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14533169172A32C600E4FD8A /* DatePickerViewController.m */; };
 		1453316C172A32C700E4FD8A /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1453316A172A32C600E4FD8A /* DatePickerViewController.xib */; };
+		9DDE4BF0172AF81600A5B6D4 /* backgroundImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE4BEF172AF81600A5B6D4 /* backgroundImage.jpg */; };
+		9DDE4BF2172AF9FB00A5B6D4 /* logo_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE4BF1172AF9FB00A5B6D4 /* logo_1.png */; };
+		9DDE4BF4172AFA6700A5B6D4 /* logo_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE4BF3172AFA6700A5B6D4 /* logo_2.png */; };
+		9DDE4BFA172AFA9200A5B6D4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE4BF9172AFA9200A5B6D4 /* Default-568h@2x.png */; };
+		9DDE4BFB172AFB2200A5B6D4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE4BF7172AFA8B00A5B6D4 /* Default@2x.png */; };
+		9DDE4BFD172AFB5C00A5B6D4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE4BFC172AFB5C00A5B6D4 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +85,12 @@
 		14533168172A32C600E4FD8A /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
 		14533169172A32C600E4FD8A /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
 		1453316A172A32C600E4FD8A /* DatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		9DDE4BEF172AF81600A5B6D4 /* backgroundImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundImage.jpg; sourceTree = "<group>"; };
+		9DDE4BF1172AF9FB00A5B6D4 /* logo_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_1.png; sourceTree = "<group>"; };
+		9DDE4BF3172AFA6700A5B6D4 /* logo_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_2.png; sourceTree = "<group>"; };
+		9DDE4BF7172AFA8B00A5B6D4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9DDE4BF9172AFA9200A5B6D4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9DDE4BFC172AFB5C00A5B6D4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +122,11 @@
 		14533101172A118F00E4FD8A = {
 			isa = PBXGroup;
 			children = (
+				9DDE4BFC172AFB5C00A5B6D4 /* Default.png */,
+				9DDE4BF9172AFA9200A5B6D4 /* Default-568h@2x.png */,
+				9DDE4BF7172AFA8B00A5B6D4 /* Default@2x.png */,
+				9DDE4BF3172AFA6700A5B6D4 /* logo_2.png */,
+				9DDE4BF1172AF9FB00A5B6D4 /* logo_1.png */,
 				14533115172A118F00E4FD8A /* nourish calendar */,
 				14533137172A118F00E4FD8A /* nourish calendarTests */,
 				1453310C172A118F00E4FD8A /* Frameworks */,
@@ -165,6 +182,7 @@
 		14533116172A118F00E4FD8A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9DDE4BEF172AF81600A5B6D4 /* backgroundImage.jpg */,
 				14533117172A118F00E4FD8A /* nourish calendar-Info.plist */,
 				14533118172A118F00E4FD8A /* InfoPlist.strings */,
 				1453311B172A118F00E4FD8A /* main.m */,
@@ -274,6 +292,12 @@
 				1453314C172A11B500E4FD8A /* MainCalendarViewController.xib in Resources */,
 				14533167172A25EE00E4FD8A /* EventDetailViewController.xib in Resources */,
 				1453316C172A32C700E4FD8A /* DatePickerViewController.xib in Resources */,
+				9DDE4BF0172AF81600A5B6D4 /* backgroundImage.jpg in Resources */,
+				9DDE4BF2172AF9FB00A5B6D4 /* logo_1.png in Resources */,
+				9DDE4BF4172AFA6700A5B6D4 /* logo_2.png in Resources */,
+				9DDE4BFA172AFA9200A5B6D4 /* Default-568h@2x.png in Resources */,
+				9DDE4BFB172AFB2200A5B6D4 /* Default@2x.png in Resources */,
+				9DDE4BFD172AFB5C00A5B6D4 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +512,7 @@
 				14533144172A118F00E4FD8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14533145172A118F00E4FD8A /* Build configuration list for PBXNativeTarget "nourish calendarTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +521,7 @@
 				14533147172A118F00E4FD8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

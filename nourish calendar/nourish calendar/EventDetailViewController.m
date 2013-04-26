@@ -10,6 +10,8 @@
 #import "EventObject.h"
 #import "DatePickerViewController.h"
 
+
+
 @interface EventDetailViewController ()
 
 @end
@@ -31,6 +33,14 @@
     // Do any additional setup after loading the view from its nib.
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pageTapped:)];
     [self.view addGestureRecognizer:tap];
+    
+    if(self.isNewEvent)
+    {
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancel:)];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done:)];
+        self.navigationItem.title = @"New Event";
+
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -122,6 +132,19 @@
 {
     [super viewDidDisappear:YES];
     [self updateData];
+}
+
+-(IBAction)cancel:(id)sender
+{
+    [[Storage defaultStore]removeObject:self.event];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.delegate eventDetailViewDismissed:self];
+}
+
+-(IBAction)done:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.delegate eventDetailViewDismissedWithAddedObject:self];
 }
 
 @end

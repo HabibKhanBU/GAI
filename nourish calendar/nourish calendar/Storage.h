@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class EventObject;
 @interface Storage : NSObject
 +(Storage *) defaultStore;
 @property (nonatomic)NSMutableArray* events;
 -(void)saveStore;
+-(void) addEvent:(EventObject*)obj;
+-(void) removeObjectAtIndex:(int)index;
+-(void)removeObject:(EventObject*)obj;
 @end

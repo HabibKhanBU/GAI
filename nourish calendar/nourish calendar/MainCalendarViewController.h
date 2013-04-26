@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MainCalendarViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+#import "EventDetailViewController.h"
+@interface MainCalendarViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,eventDetailViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

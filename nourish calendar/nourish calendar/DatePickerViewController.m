@@ -32,6 +32,11 @@
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
     [df setDateFormat:@"MMM dd, yyyy HH:mm"];
     self.dateLabel.text = [df stringFromDate:date];
+    switch(self.ind)
+    {
+    case 0: self.navigationItem.title = @"Start Time";break;
+    case 1: self.navigationItem.title = @"End Time";break;
+    }
     // Do any additional setup after loading the view from its nib.
 }
 
