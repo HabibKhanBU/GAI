@@ -11,5 +11,5 @@
 @interface Storage : NSObject
 +(Storage *) defaultStore;
 @property (nonatomic)NSMutableArray* events;
-
+-(void)saveStore;
 @end

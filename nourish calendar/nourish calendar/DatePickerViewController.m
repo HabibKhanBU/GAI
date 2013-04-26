@@ -40,8 +40,8 @@
     [super viewWillDisappear:YES];
     switch(self.ind)
     {
-        case 0: self.eo.startTime = self.datePicker.date;
-        case 1: self.eo.endTime = self.datePicker.date;
+        case 0: self.eo.startTime = self.datePicker.date;break;
+        case 1: self.eo.endTime = self.datePicker.date;break;
     }
 }
 

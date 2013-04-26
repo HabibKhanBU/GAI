@@ -14,13 +14,40 @@
 {
     self = [super init];
     if (self) {
-        self.events = [[NSMutableArray alloc]init];
-        NSDate * ds = [[NSDate alloc]initWithTimeIntervalSinceNow:0];
-        NSDate * de = [[NSDate alloc]initWithTimeIntervalSinceNow:3600];
-        EventObject * e1=[[EventObject alloc]initWithName:@"Poker Night Fundraiser" startTime:ds endTime:de description:@"COME!"];
-        EventObject * e2=[[EventObject alloc]initWithName:@"Destin foiejwiofjweio" startTime:ds endTime:de description:@"foewnfiew"];
-        [self.events addObject:e1];
-        [self.events addObject:e2];
+        
+        NSArray * documentDirectories =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString * documentDirectory = [documentDirectories objectAtIndex:0];
+        NSString * directory = [documentDirectory stringByAppendingPathComponent:@"calenderStore"];
+        BOOL fileExists;
+        fileExists = [[NSFileManager defaultManager] fileExistsAtPath:directory];
+        if(fileExists)
+        {
+            self.events = [NSKeyedUnarchiver unarchiveObjectWithFile:directory];
+        }else {
+            NSLog(@"File Doesn't Exist, %@",directory);
+            self.events = [[NSMutableArray alloc]init];
+            NSDate * ds = [[NSDate alloc]initWithTimeIntervalSinceNow:0];
+            NSDate * de = [[NSDate alloc]initWithTimeIntervalSinceNow:3600];
+            EventObject * e1=[[EventObject alloc]initWithName:@"Poker Night Fundraiser" startTime:ds endTime:de description:@"COME!"];
+            EventObject * e2=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
+            EventObject * e3=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
+            EventObject * e4=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
+            EventObject * e5=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
+            EventObject * e6=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
+            EventObject * e7=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
+            EventObject * e8=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
+            EventObject * e9=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];EventObject * e10=[[EventObject alloc]initWithName:@"Hunger Lunch Tour" startTime:ds endTime:de description:@""];
+            [self.events addObject:e1];
+            [self.events addObject:e2];
+            [self.events addObject:e3];
+            [self.events addObject:e4];
+            [self.events addObject:e5];
+            [self.events addObject:e6];
+            [self.events addObject:e7];
+            [self.events addObject:e8];
+            [self.events addObject:e9];
+            [self.events addObject:e10];
+        }
     }
     return self;
 }
@@ -60,6 +87,18 @@
     }
 #endif
     return _default;
+}
+
+-(void)saveStore
+{
+    NSLog(@"Saving");
+    NSArray * documentDirectories =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString * documentDirectory = [documentDirectories objectAtIndex:0];
+    NSString * directory = [documentDirectory stringByAppendingPathComponent:@"calenderStore"];
+    BOOL fileExists;
+    NSLog(@"%@",directory);
+    fileExists = [[NSFileManager defaultManager] fileExistsAtPath:directory];
+    [NSKeyedArchiver archiveRootObject:self.events toFile:directory];
 }
 
 @end

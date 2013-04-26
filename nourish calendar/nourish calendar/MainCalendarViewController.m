@@ -31,6 +31,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UIBarButtonItem * ubb = [[UIBarButtonItem alloc]initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(save:)];
+    ubb.title = @"Save";
+    self.navigationItem.rightBarButtonItem = ubb;
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,12 +58,14 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     EventObject * eo = [[Storage defaultStore].events objectAtIndex:[indexPath row]];
 
     cell.textLabel.text = eo.name;
-    
+    NSDateFormatter *df = [[NSDateFormatter alloc]init];
+    [df setDateFormat:@"MMM dd, yyyy HH:mm"];
+    cell.detailTextLabel.text = [df stringFromDate:eo.startTime];
     return cell;
 }
 
@@ -78,5 +83,8 @@
     [super viewDidAppear:YES];
     [self.tableView reloadData];
 }
-
+-(IBAction)save:(id)sender
+{
+    [[Storage defaultStore]saveStore];
+}
 @end

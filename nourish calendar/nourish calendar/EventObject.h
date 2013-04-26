@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Storage.h"
 
-@interface EventObject : NSObject
+@interface EventObject : NSObject <NSCoding>
 
 @property (nonatomic) NSString* name;
 @property (nonatomic) NSDate * startTime;
